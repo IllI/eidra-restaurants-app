@@ -6,12 +6,17 @@ Eidra's Munchies! is an API-driven Next.js application that helps our users find
 
 ## Setup
 
-1. Install dependencies:
+1. Clone repo:
+   ```bash
+   git clone https://github.com/IllI/eidra-restaurants-app
+   ```
+   
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-2. Run the development server:
+3. Run the development server:
    ```bash
    npm run dev
    ```
