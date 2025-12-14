@@ -1,6 +1,3 @@
-/**
- * Custom hook for fetching filter options
- */
 
 import { useState, useEffect } from 'react';
 import type { Filter, FilterResponse } from '@/types/api';
@@ -30,11 +27,9 @@ export function useFilters(): UseFiltersReturn {
 
       const data = await response.json() as FilterResponse;
       
-      // API returns object { filters: [...] }
       if (data && Array.isArray(data.filters)) {
         setFilters(data.filters);
       } else {
-        // Fallback if structure is unexpected
         setFilters([]);
       }
     } catch (err) {

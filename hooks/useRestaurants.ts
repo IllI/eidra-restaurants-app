@@ -1,7 +1,3 @@
-/**
- * Custom hook for fetching restaurants with filtering support
- */
-
 import { useState, useEffect } from 'react';
 import type { Restaurant, RestaurantResponse } from '@/types/api';
 
@@ -25,7 +21,6 @@ export function useRestaurants(options: UseRestaurantsOptions = {}): UseRestaura
 
   const fetchRestaurants = async () => {
     if (!enabled) return;
-
     setLoading(true);
     setError(null);
 
@@ -43,7 +38,6 @@ export function useRestaurants(options: UseRestaurantsOptions = {}): UseRestaura
       }
 
       const data = await response.json();
-      
       let fetchedRestaurants: Restaurant[] = Array.isArray(data?.restaurants) ? data.restaurants : [];
      
       if (filterIds && filterIds.length > 0) {
@@ -51,7 +45,6 @@ export function useRestaurants(options: UseRestaurantsOptions = {}): UseRestaura
           restaurant.filter_ids && restaurant.filter_ids.some(id => filterIds.includes(id))
         );
       }
-
       setRestaurants(fetchedRestaurants);
     } catch (err) {
       const error = err instanceof Error ? err : new Error('Unknown error');
@@ -61,7 +54,7 @@ export function useRestaurants(options: UseRestaurantsOptions = {}): UseRestaura
       setLoading(false);
     }
   };
-
+  
   useEffect(() => {
     fetchRestaurants();
   }, [filterIds?.join(','), enabled]);
