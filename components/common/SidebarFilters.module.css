@@ -1,0 +1,58 @@
+.sf-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.sf-cat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sf-cat-btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  font-family: 'SF Pro', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-main);
+  text-align: left;
+  cursor: pointer;
+  
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sf-cat-btn:hover {
+  background-color: var(--color-grey-100);
+}
+
+.sf-cat-active {
+  background-color: var(--color-green);
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.sf-cat-active:hover {
+  background-color: var(--color-green);
+  opacity: 0.95;
+}
+
+.sf-checkmark {
+  display: block;
+  width: 6px;
+  height: 10px;
+  border: solid currentColor;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-right: 4px;
+  margin-bottom: 2px;
+}

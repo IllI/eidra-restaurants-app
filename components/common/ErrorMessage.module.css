@@ -1,0 +1,25 @@
+.err-container {
+  padding: 24px;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  color: var(--color-text-secondary);
+  margin: 24px 0;
+}
+
+.err-container h4 {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.err-retry-btn {
+  margin-top: 12px;
+  padding: 8px 24px;
+  background-color: var(--color-green);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+}
