@@ -10,7 +10,7 @@ Eidra's Munchies! is an API-driven Next.js application that helps our users find
    ```bash
    git clone https://github.com/IllI/eidra-restaurants-app
    ```
-   
+
 2. Install dependencies:
    ```bash
    npm install
@@ -24,3 +24,7 @@ Eidra's Munchies! is an API-driven Next.js application that helps our users find
 3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 
+
+## Note
+
+The current version only filters by food category. Future versions will include price range and open/closed status as additional restaurant information and filters.
